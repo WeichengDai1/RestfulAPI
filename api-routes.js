@@ -21,6 +21,8 @@ router.route('/users/:contact_id')
     .put(contactController.update)
     .delete(contactController.delete);
 
+router.route('/users/find')
+    .get(contactControllerSearch.view)
 
 // Export API routes
 module.exports = router;

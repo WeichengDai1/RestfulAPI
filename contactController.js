@@ -1,6 +1,7 @@
 // contactController.js
 // Import contact model
 Contact = require('./contactModel');
+
 // Handle index actions
 exports.index = function (req, res) {
     try{
@@ -69,9 +70,9 @@ exports.view = function (req, res) {
             status: "error",
             message: e,
         });
-    }
-    
+    } 
 };
+
 // Handle update contact info
 exports.update = function (req, res) {
     try{
