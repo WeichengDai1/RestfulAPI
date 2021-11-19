@@ -68,10 +68,18 @@ exports.view = function (req, res) {
        Contact.findById(req.params.contact_id, function (err, contact) {
             if (err)
                 res.send(err);
-            res.json({
-                message: 'user details loading..',
-                data: contact
-            });
+            if(Object.keys(contacts).length === 0)
+                res.json({
+                    status: 'no user found',
+                    message: 'no user found'
+                });
+            else{
+                res.json({
+                    message: 'user details loading..',
+                    data: contact
+                });
+            }
+            
         }); 
     }catch(e){
         res.json({
