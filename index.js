@@ -41,7 +41,7 @@ var str1 = 'You can use https://desolate-bayou-82803.herokuapp.com/api/users and
 ' \n You can add one or more attributes of these four: firstname, lastname, email and address.';
 while (str1.indexOf("\\n") >= 0) { var str2 = str1.replace("\\n", " \n "); } 
 // Send message for default URL
-app.get('/', (req, res) => res.send(str2));
+app.get('/', (req, res) => res.send(str1));
 
 // Use Api routes in the App
 app.use('/api', apiRoutes);
