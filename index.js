@@ -18,8 +18,7 @@ app.use(bodyParser.json());
 // mongoose.connect('mongodb://localhost/resthub', { useNewUrlParser: true});
 
 // Heroku Mongoose connection
-const uri = process.env.MONGODB_URI;
-mongoose.connect(uri, { useNewUrlParser: true });
+mongoose.connect('mongodb://heroku_5686p02g:sia8l3fni4jmu7qbn0ac1t75mf@ds349857.mlab.com:49857/heroku_5686p02g', { useNewUrlParser: true });
 
 var db = mongoose.connection;
 
