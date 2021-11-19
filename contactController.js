@@ -30,10 +30,10 @@ exports.index = function (req, res) {
 exports.new = function (req, res) {
     try{
         var contact = new Contact();
-        contact.firstname = req.body.firstname;
-        contact.lastname = req.body.lastname;
-        contact.email = req.body.email;
-        contact.address = req.body.address;
+        contact.firstname = req.body.firstname? req.body.firstname: "DEFAULT FIRSTNAME";
+        contact.lastname = req.body.lastname? req.body.lastname: "DEFAULT LASTNAME";
+        contact.email = req.body.email? req.body.email: "DEFAULT EMAIL";
+        contact.address = req.body.address? req.body.address: "DEFAULT ADDRESS";
     // save the contact and check for errors
         contact.save(function (err) {
             // Check for validation error
