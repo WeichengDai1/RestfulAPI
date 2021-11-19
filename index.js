@@ -33,7 +33,13 @@ else
 var port = process.env.PORT || 8080;
 
 // Send message for default URL
-app.get('/', (req, res) => res.send('Hello World'));
+app.get('/', (req, res) => res.send('You can use https://desolate-bayou-82803.herokuapp.com/api/users and POST method to add users.'+
+'\nRemember to include all four attributes, firstname, lastname, email and address.'+
+'\n\n\n You can use https://desolate-bayou-82803.herokuapp.com/api/users/{id} and GET method to show a certain user. '+
+'\n\n\n If you want to see all the users, use https://desolate-bayou-82803.herokuapp.com/api/users and GET method.' +
+'\n\n\n You can use https://desolate-bayou-82803.herokuapp.com/api/users/{id} and DELETE method to delete a certain user.'+
+'\n\n\n You can use https://desolate-bayou-82803.herokuapp.com/api/users/{id} and PUT method to update a certain user.' +
+'\n You can add one or more attributes of these four: firstname, lastname, email and address.'));
 
 // Use Api routes in the App
 app.use('/api', apiRoutes);
