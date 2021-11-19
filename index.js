@@ -33,12 +33,13 @@ else
 var port = process.env.PORT || 8080;
 
 var str1 = 'You can use https://desolate-bayou-82803.herokuapp.com/api/users and POST method to add users.'+
-' \n Remember to include all four attributes, firstname, lastname, email and address.'+
-' \n \n \n You can use https://desolate-bayou-82803.herokuapp.com/api/users/{id} and GET method to show a certain user. '+
-' \n \n \n If you want to see all the users, use https://desolate-bayou-82803.herokuapp.com/api/users and GET method.' +
-' \n \n \n You can use https://desolate-bayou-82803.herokuapp.com/api/users/{id} and DELETE method to delete a certain user.'+
-' \n \n \n You can use https://desolate-bayou-82803.herokuapp.com/api/users/{id} and PUT method to update a certain user.' +
-' \n You can add one or more attributes of these four: firstname, lastname, email and address.';
+' <br/> Remember to include all four attributes, firstname, lastname, email and address.'+
+' <br/> <br/> <br/> You can use https://desolate-bayou-82803.herokuapp.com/api/users/{id} and GET method to show a certain user. '+
+' <br/> <br/> <br/> If you want to see all the users, use https://desolate-bayou-82803.herokuapp.com/api/users and GET method.' +
+' <br/> <br/> <br/> You can use https://desolate-bayou-82803.herokuapp.com/api/users/{id} and DELETE method to delete a certain user.'+
+' <br/> <br/> <br/> You can use https://desolate-bayou-82803.herokuapp.com/api/users/{id} and PUT method to update a certain user.' +
+' <br/> You can add one or more attributes of these four: firstname, lastname, email and address.' +
+' <br/> <br/> <br/> You can search for users using https://desolate-bayou-82803.herokuapp.com/api/find?lastname=Dai and GET method to find a certain user.';
 while (str1.indexOf("\\n") >= 0) { var str2 = str1.replace("\\n", " \n "); } 
 // Send message for default URL
 app.get('/', (req, res) => res.send(str1));

@@ -10,6 +10,7 @@ router.get('/', function (req, res) {
 });
 // Import contact controller
 var contactController = require('./contactController');
+var contactControllerSearch = require('./contactControllerSearch')
 // Contact routes
 router.route('/users')
     .get(contactController.index)
@@ -21,7 +22,7 @@ router.route('/users/:contact_id')
     .put(contactController.update)
     .delete(contactController.delete);
 
-router.route('/users/find')
+router.route('/find')
     .get(contactControllerSearch.view)
 
 // Export API routes

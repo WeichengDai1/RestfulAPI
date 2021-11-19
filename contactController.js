@@ -12,11 +12,19 @@ exports.index = function (req, res) {
                     message: err,
                 });
             }
-            res.json({
-                status: "success",
-                message: "Users retrieved successfully",
-                data: contacts
-            });
+            if(Object.keys(contacts).length === 0)
+                    res.json({
+                        status: 'no user found',
+                        message: 'no user found'
+                    });
+            else{
+                res.json({
+                    status: "success",
+                    message: "Users retrieved successfully",
+                    data: contacts
+                });
+            }
+            
         });
     }catch(e){
         res.json({
